@@ -1,0 +1,2 @@
+
+export { IocContainer } from './IocContainer';

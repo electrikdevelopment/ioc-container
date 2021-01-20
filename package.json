@@ -1,0 +1,11 @@
+{
+  "name": "ioc-container",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "repository": "git@github.com:electrikdevelopment/ioc-container.git",
+  "author": "Jeff Hall <jhall@electrikdevelopment.co.uk>",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.1.3"
+  }
+}
