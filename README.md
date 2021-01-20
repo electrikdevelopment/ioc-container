@@ -4,16 +4,10 @@
 ## TODO
 
 ### Library / project setup
-* index.js and build scripts
-* Eslint
-* prettier
-* jest setup
-* precommit lint and test
-* library optimizations - declarations etc.
 * CI integration.
 * Readme - documentation
 * Contributing.md  - branching stratergy, release process.
-* Publishing to NPM
+* Publishing to NPM and .npmignore
 * jsdocs
 * windows (non bash) npm script compatibility
 
