@@ -1,7 +1,5 @@
-
-
 export class IocContainer {
-    createObject(name: string): never {
-        throw new Error('Not Implemented')
-    }
+  createObject(): never {
+    throw new Error('Not Implemented');
+  }
 }

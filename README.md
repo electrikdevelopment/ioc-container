@@ -15,7 +15,7 @@
 * Contributing.md  - branching stratergy, release process.
 * Publishing to NPM
 * jsdocs
-
+* windows (non bash) npm script compatibility
 
 
 ### Functionality
