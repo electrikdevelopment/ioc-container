@@ -14,8 +14,13 @@ export class IocContainer {
     this.consts = {};
   }
 
-  register(name: string, obj: any): IocContainer {
+  registerConst(name: string, obj: any): IocContainer {
     this.consts[name] = obj;
+    return this;
+  }
+
+  register<T, A extends any[]>(clazz: Type<T>, ...args: A): IocContainer {
+    this.create(clazz, ...args);
     return this;
   }
 
