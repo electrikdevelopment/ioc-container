@@ -33,7 +33,6 @@ const accountHttpService = container
 ```
 
 ## Functionality Roadmap
-
 * Support singleton vs prototype objects
 * Auto create objects as needed. (and handle circular dependency check.)
 * Support accessor injection
@@ -47,10 +46,10 @@ const accountHttpService = container
   It should consistently reuse instances.
 
 ## Developer tooling Roadmap
-* Add CI integration.
+* Better jsdocs for public functions
 * Add better Readme documentation.
 * Add a Contributing.md with branching strategy, release process and versioning strategy,
 * Publish this to NPM.
-* Add jsdocs for public functions
+* Add CI integration.
 * Support windows development (non bash) environments.
 

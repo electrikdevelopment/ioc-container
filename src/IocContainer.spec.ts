@@ -43,7 +43,7 @@ describe('IocContainer', () => {
 
   it('throws an error if a class cant be found', () => {
     expect(() => container.create(UserHttpService, UserDao)).toThrow(
-      'Instance of UserDao not found. Do you need to create it first?',
+      'Instance of UserDao not found. Do you need to create or register it first?',
     );
   });
 
