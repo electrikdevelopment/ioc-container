@@ -7,16 +7,33 @@ interface Type<T> extends Function {
 
 export class IocContainer {
   private readonly instances: { [className: string]: any };
+  private readonly consts: { [name: string]: any };
 
   constructor() {
     this.instances = {};
+    this.consts = {};
+  }
+
+  register(name: string, obj: any): IocContainer {
+    this.consts[name] = obj;
+    return this;
   }
 
   create<T, A extends any[]>(clazz: Type<T>, ...args: A): T {
-    const resolvedArgs = args.map((arg) => {
-      const instance = this.instances[arg.name];
-      if (!instance) {
-        throw new Error(`Instance of ${arg.name} not found. Do you need to create it first?`);
+    const resolvedArgs = args.map((arg, i) => {
+      let instance;
+      if (typeof arg === 'string') {
+        instance = this.consts[arg];
+        if (!instance) {
+          throw new Error(`Constant registered as ${arg} not found. Do you need to call register first?`);
+        }
+      } else if (typeof arg === 'function' && arg.name) {
+        instance = this.instances[arg.name];
+        if (!instance) {
+          throw new Error(`Instance of ${arg.name} not found. Do you need to create it first?`);
+        }
+      } else {
+        throw new Error(`Unknown argument type at index ${i}`);
       }
       return instance;
     });

@@ -15,10 +15,11 @@
 ### Functionality
 * singleton vs prototype objects
 * accessor injection
-* auto create objects as needed.
+* auto create objects as needed. (circular dependency check.)
 * named objects
 * named constants
 * fail fast for feature gaps.
 * delay object construction and auto order. 
 * add error codes to exceptions
 * chain the api.
+* check the number of constructor args given matches the constructor

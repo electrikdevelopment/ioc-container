@@ -1,6 +1,16 @@
 export class UserDao {}
 
-export class AccountDao {}
+export interface AccountDaoConfig {
+  url: string;
+}
+
+export class AccountDao {
+  config: AccountDaoConfig;
+
+  constructor(config: AccountDaoConfig) {
+    this.config = config;
+  }
+}
 
 export class UserHttpService {
   dao: UserDao;
